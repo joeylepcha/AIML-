@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Flowise service
+  flowise:
+    image: flowiseai/flowise
+    container_name: flowise-service
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./flowise-data:/root/.flowise
+    restart: unless-stopped
+  
+  # Main API gateway
+  main-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.main
+    container_name: main-api
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./uploads:/app/uploads
+    depends_on:
+      - flowise
+    restart: unless-stopped
+  
+  # Text summarization service
+  text-summarization:
+    build:
+      context: .
+      dockerfile: services/text-summarization/Dockerfile
+    container_name: text-summarization-service
+    ports:
+      - "8001:8001"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8001
+    volumes:
+      - ./uploads:/app/uploads
+    depends_on:
+      - flowise
+    restart: unless-stopped
+  
+  # Q&A documents service
+  qa-documents:
+    build:
+      context: .
+      dockerfile: services/qa-documents/Dockerfile
+    container_name: qa-documents-service
+    ports:
+      - "8002:8002"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8002
+    volumes:
+      - ./uploads:/app/uploads
+      - ./chroma_db:/app/chroma_db
+    depends_on:
+      - flowise
+    restart: unless-stopped
+  
+  # Learning path suggestion service
+  learning-path:
+    build:
+      context: .
+      dockerfile: services/learning-path/Dockerfile
+    container_name: learning-path-service
+    ports:
+      - "8003:8003"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8003
+    depends_on:
+      - flowise
+    restart: unless-stopped
+  
+  # Frontend service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend-service
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+
+volumes:
+  flowise-data:
+  chroma_db:
