@@ -1,9 +1,75 @@
-# AI Microservices with Flowise + LangChain
+# AI Microservices Mobile App 🚀
 
-This project implements modular AI microservices using Flowise and LangChain for the following functionalities:
-1. Text summarization
-2. Q&A over documents
-3. Dynamic learning path suggestion
+> A modern web application with mobile-first design featuring user authentication and AI-powered services
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+
+## ✨ Features
+
+### 🔐 Authentication System
+- ✅ **User Registration & Login** - Secure JWT-based authentication
+- ✅ **Protected Routes** - Access control for authenticated users
+- ✅ **Profile Management** - Update user information
+- ✅ **Demo Account** - Ready-to-use test credentials
+
+### 🎨 Modern UI/UX
+- ✅ **Mobile-First Design** - Optimized for all devices
+- ✅ **Responsive Layout** - Beautiful on desktop and mobile
+- ✅ **Smooth Animations** - Powered by Framer Motion
+- ✅ **Interactive Components** - Hover effects and loading states
+- ✅ **Gradient Themes** - Modern visual design
+
+### 🤖 AI Services (Framework Ready)
+- 🚧 **Text Summarization** - Summarize documents and text
+- 🚧 **Document Q&A** - Ask questions about uploaded files
+- ✅ **Learning Path Suggestions** - Personalized learning recommendations
+
+## 🚀 Quick Start
+
+### Option 1: One-Click Setup (Recommended)
+
+**Windows:**
+```cmd
+start.bat
+```
+
+**Linux/Mac:**
+```bash
+chmod +x start.sh
+./start.sh
+```
+
+### Option 2: Manual Setup
+
+1. **Backend Setup:**
+```bash
+pip install fastapi uvicorn pydantic python-dotenv python-multipart requests sqlalchemy passlib python-jose bcrypt alembic email-validator pypdf python-docx
+python create_demo_user.py
+python main.py
+```
+
+2. **Frontend Setup:**
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## 📱 Access Points
+
+- **🌐 Frontend Application**: http://localhost:3000
+- **🔌 Backend API**: http://localhost:8000
+- **📖 API Documentation**: http://localhost:8000/docs
+
+## 🔑 Demo Credentials
+
+```
+Email: demo@example.com
+Username: demo
+Password: demo123
+```
 
 ## Project Structure
 

@@ -1,0 +1,25 @@
+{
+  "short_name": "Smart Flow",
+  "name": "Smart Flow - Intelligent Workflow Management",
+  "description": "AI-powered workflow management platform for enhanced productivity",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["productivity", "business", "utilities"],
+  "lang": "en-US"
+}

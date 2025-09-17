@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#grad1)" stroke="none"/>
+  
+  <!-- Flow lines representing workflow -->
+  <path d="M 12 20 Q 32 10 52 20" stroke="url(#grad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 12 32 Q 32 22 52 32" stroke="url(#grad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 12 44 Q 32 34 52 44" stroke="url(#grad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Smart nodes/dots -->
+  <circle cx="16" cy="20" r="3" fill="white" opacity="0.9"/>
+  <circle cx="32" cy="15" r="3" fill="white" opacity="0.9"/>
+  <circle cx="48" cy="20" r="3" fill="white" opacity="0.9"/>
+  
+  <circle cx="16" cy="32" r="3" fill="white" opacity="0.9"/>
+  <circle cx="32" cy="27" r="3" fill="white" opacity="0.9"/>
+  <circle cx="48" cy="32" r="3" fill="white" opacity="0.9"/>
+  
+  <circle cx="16" cy="44" r="3" fill="white" opacity="0.9"/>
+  <circle cx="32" cy="39" r="3" fill="white" opacity="0.9"/>
+  <circle cx="48" cy="44" r="3" fill="white" opacity="0.9"/>
+  
+  <!-- Central brain/AI element -->
+  <circle cx="32" cy="50" r="6" fill="white" opacity="0.9"/>
+  <circle cx="32" cy="50" r="4" fill="url(#grad1)"/>
+  <circle cx="30" cy="48" r="1" fill="white"/>
+  <circle cx="34" cy="48" r="1" fill="white"/>
+  <path d="M 29 52 Q 32 54 35 52" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

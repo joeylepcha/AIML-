@@ -6,7 +6,7 @@ services:
     image: flowiseai/flowise
     container_name: flowise-service
     ports:
-      - "3000:3000"
+      - "3002:3000"
     environment:
       - PORT=3000
     volumes:
@@ -87,7 +87,9 @@ services:
       dockerfile: Dockerfile
     container_name: frontend-service
     ports:
-      - "3001:3001"
+      - "3000:3000"
+    environment:
+      - PORT=3000
     restart: unless-stopped
 
 volumes:

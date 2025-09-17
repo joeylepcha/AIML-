@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            min-height: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        p {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .status {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .status p {
+            color: #374151;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        button:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 DEBUG TEST</h1>
+        <p>Direct HTML Test - No React</p>
+        <div class="status">
+            <p>✅ HTML is loading</p>
+            <p>✅ CSS is working</p>
+            <p>✅ Server is responding</p>
+        </div>
+        <button onclick="alert('HTML test successful!')">Click Test</button>
+        <br><br>
+        <small style="color: #9ca3af;">
+            If you can see this, the server works.<br>
+            The issue is with React compilation.
+        </small>
+    </div>
+</body>
+</html>

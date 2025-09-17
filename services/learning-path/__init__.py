@@ -1,0 +1,3 @@
+"""
+Learning Path service module
+"""
